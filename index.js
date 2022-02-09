@@ -70,7 +70,12 @@ function winner() {
   const msg = `Congrats, ${playerName}! \n $ 1 , 0 0 0 , 0 0 0`
 
   figlet(msg, (err, data) => {
-    console.log(gradient.pastel.multiline(data))
+    if (err) {
+      console.error(err)
+      process.exit(1)
+    } else {
+      console.log(gradient.pastel.multiline(data))
+    }
   })
 }
 
