@@ -9,7 +9,7 @@ import figlet from 'figlet'
 
 let playerName;
 
-const sleep = (ms = 2000) => new Promise(resolve => setTimeout(resolve, ms));
+const sleep = (ms = 1000) => new Promise(resolve => setTimeout(resolve, ms));
 
 async function welcome() {
   const rainbowTitle = chalkAnimation.rainbow(
